@@ -1,0 +1,28 @@
+{
+  "name": "vuelo",
+  "plural": "vuelos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "pagado": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "comentarios": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

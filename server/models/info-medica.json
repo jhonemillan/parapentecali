@@ -1,0 +1,98 @@
+{
+  "name": "info_medica",
+  "plural": "info_medica",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "embarazo": {
+      "type": "boolean",
+      "required": true
+    },
+    "cardiaco": {
+      "type": "boolean",
+      "required": true
+    },
+    "taquicardia": {
+      "type": "boolean",
+      "required": true
+    },
+    "hipertiroidismo": {
+      "type": "boolean",
+      "required": true
+    },
+    "extrasistole": {
+      "type": "boolean",
+      "required": true
+    },
+    "fatiga": {
+      "type": "boolean",
+      "required": true
+    },
+    "convulsiones": {
+      "type": "boolean",
+      "required": true
+    },
+    "vertigo": {
+      "type": "boolean",
+      "required": true
+    },
+    "cadera": {
+      "type": "boolean",
+      "required": true
+    },
+    "psiquiatria": {
+      "type": "boolean",
+      "required": true
+    },
+    "diabetes": {
+      "type": "boolean",
+      "required": true
+    },
+    "cirugia": {
+      "type": "boolean",
+      "required": true
+    },
+    "factor_rh": {
+      "type": "string",
+      "required": true
+    },
+    "eps": {
+      "type": "string",
+      "required": true
+    },
+    "medico": {
+      "type": "string",
+      "required": true
+    },
+    "fractura": {
+      "type": "boolean",
+      "required": true
+    },
+    "arl": {
+      "type": "string",
+      "required": true
+    },
+    "nombre_emergencia1": {
+      "type": "string",
+      "required": true
+    },
+    "celular_emer1": {
+      "type": "string",
+      "required": true
+    },
+    "nombre_emergencia2": {
+      "type": "string",
+      "required": true
+    },
+    "celular_emer2": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

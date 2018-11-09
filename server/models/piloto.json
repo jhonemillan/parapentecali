@@ -1,0 +1,40 @@
+{
+  "name": "piloto",
+  "plural": "pilotos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cedula": {
+      "type": "string",
+      "required": true
+    },
+    "nombres": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "celular": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "vuelos": {
+      "type": "hasMany",
+      "model": "vuelo",
+      "foreignKey": "id_piloto"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

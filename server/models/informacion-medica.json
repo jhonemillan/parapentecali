@@ -1,0 +1,14 @@
+{
+  "name": "informacion_medica",
+  "plural": "informacion_medica",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

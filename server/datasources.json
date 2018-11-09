@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "atlas": {
+    "host": "cluster0-dxq0n.mongodb.net",
+    "port": 0,
+    "url": "mongodb+srv://admin:@cluster0-dxq0n.mongodb.net/parapentecali",
+    "database": "parapentecali",
+    "password": "admin",
+    "name": "atlas",
+    "user": "admin",
+    "connector": "mongodb"
+  }
+}

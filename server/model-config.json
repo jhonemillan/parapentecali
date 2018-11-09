@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "atlas"
+  },
+  "AccessToken": {
+    "dataSource": "atlas",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "atlas",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "atlas",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "atlas",
+    "public": false
+  },
+  "clientes": {
+    "dataSource": "atlas",
+    "public": true
+  },
+  "informacion_medica": {
+    "dataSource": "atlas",
+    "public": true
+  },
+  "info_medica": {
+    "dataSource": "atlas",
+    "public": true
+  },
+  "piloto": {
+    "dataSource": "atlas",
+    "public": true
+  },
+  "vuelo": {
+    "dataSource": "atlas",
+    "public": true
+  }
+}

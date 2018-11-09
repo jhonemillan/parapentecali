@@ -1,0 +1,74 @@
+{
+  "name": "clientes",
+  "plural": "clientes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nombres": {
+      "type": "string",
+      "required": true
+    },
+    "apellidos": {
+      "type": "string",
+      "required": true
+    },
+    "fechanacimiento": {
+      "type": "date",
+      "required": true
+    },
+    "cedula": {
+      "type": "string",
+      "required": true
+    },
+    "ciudadcedula": {
+      "type": "string",
+      "required": true
+    },
+    "profesion": {
+      "type": "string",
+      "required": true
+    },
+    "empresa": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "barrio": {
+      "type": "string",
+      "required": true
+    },
+    "celular": {
+      "type": "string",
+      "required": true
+    },
+    "peso_aproximado": {
+      "type": "number",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "enfermedades": {
+      "type": "hasOne",
+      "model": "info_medica",
+      "foreignKey": "cliente_id"
+    },
+    "vuelos": {
+      "type": "hasMany",
+      "model": "vuelo",
+      "foreignKey": "id_cliente"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
