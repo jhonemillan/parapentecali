@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "atlas"
+    "dataSource": "atlas",
+    "public":true
   },
   "AccessToken": {
     "dataSource": "atlas",
@@ -26,14 +27,14 @@
   },
   "RoleMapping": {
     "dataSource": "atlas",
-    "public": false,
+    "public": true,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
     "dataSource": "atlas",
-    "public": false
+    "public": true
   },
   "clientes": {
     "dataSource": "atlas",
