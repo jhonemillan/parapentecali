@@ -1,3 +1,6 @@
+import { JwtInterceptor } from './services/Interceptor';
+import { AuthenticationService } from './services/Authentication.service';
+import { AuthGuard } from './guards/auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -10,6 +13,10 @@ import { ClientesComponent } from './components/clientes/clientes.component';
 import { LoginComponent } from './components/login/login.component';
 import { VuelosComponent } from './components/vuelos/vuelos.component';
 import { PilotosComponent } from './components/pilotos/pilotos.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,9 +33,19 @@ import { PilotosComponent } from './components/pilotos/pilotos.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatToolbarModule,
-    MatCardModule
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard, 
+              AuthenticationService,
+              {
+                provide: HTTP_INTERCEPTORS,
+                useClass: JwtInterceptor,
+                multi: true
+              }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
