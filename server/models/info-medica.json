@@ -7,6 +7,10 @@
     "validateUpsert": true
   },
   "properties": {
+    "peso_aproximado": {
+      "type": "number",
+      "required": true
+    },
     "embarazo": {
       "type": "boolean",
       "required": true

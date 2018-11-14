@@ -19,14 +19,18 @@
       "type": "date",
       "required": true
     },
-    "cedula": {
+    "tipo_documento": {
       "type": "string",
       "required": true
     },
-    "ciudadcedula": {
+    "documento": {
       "type": "string",
       "required": true
     },
+    "origen_documento": {
+      "type": "string",
+      "required": true
+    },    
     "profesion": {
       "type": "string",
       "required": true
@@ -46,11 +50,7 @@
     "celular": {
       "type": "string",
       "required": true
-    },
-    "peso_aproximado": {
-      "type": "number",
-      "required": true
-    },
+    },    
     "email": {
       "type": "string",
       "required": true

@@ -17,6 +17,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +42,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatTabsModule,
+    MatSelectModule,
+    MatDatepickerModule,
     FormsModule,
     HttpClientModule
   ],
