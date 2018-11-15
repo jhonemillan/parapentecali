@@ -1,56 +1,90 @@
 <div class="example-container">
     <mat-tab-group>
         <mat-tab label="General"> 
-            <mat-form-field>
-                <input matInput placeholder="Nombres" required>
-              </mat-form-field>
-            
+          <br>
+
+        <p>
+          <mat-form-field> 
+              <input matInput placeholder="Nombres" required>
+           </mat-form-field>
+          </p>
+
+            <p>
               <mat-form-field>
                 <input matInput placeholder="Apellidos" required>
               </mat-form-field>
-            
-              <mat-form-field>
-                  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                  <mat-datepicker #picker></mat-datepicker>
-                </mat-form-field>
-            
-              <mat-form-field>
-                  <mat-select placeholder="Tipo Documento">
-                    <mat-option value="option">Cedula de Ciudadania</mat-option>
-                    <mat-option value="option">Cedula de Extranjeria</mat-option>
-                    <mat-option value="option">Tarjeta de Identidad</mat-option>
-                    <mat-option value="option">Pasaporte</mat-option>
-                  </mat-select>
-                </mat-form-field>
-              
-              <mat-form-field>
-                  <input matInput type="text" placeholder="Documento" required>
-                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
 
+            </p>
+             
+            <p>
+                <mat-form-field>
+                    <mat-select placeholder="Tipo Documento">
+                      <mat-option value="option">Cedula de Ciudadania</mat-option>
+                      <mat-option value="option">Cedula de Extranjeria</mat-option>
+                      <mat-option value="option">Tarjeta de Identidad</mat-option>
+                      <mat-option value="option">Pasaporte</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+              
+              <p>
+                <mat-form-field>
+                    <input matInput type="text" placeholder="Documento" required>
+                  </mat-form-field>
+              </p>
+
+              <p>
                 <mat-form-field>
                     <input matInput type="text" placeholder="Origen Documento" required>
                   </mat-form-field>
-              <mat-form-field>
-                <input matInput type="text" placeholder="Profesion" required>
-              </mat-form-field>
+              </p>
+
+              <p>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Profesion" required>
+                </mat-form-field>
+              </p>
             
-              <mat-form-field>
-                <input matInput type="text" placeholder="Empresa" required>
-              </mat-form-field>
+              <p>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Empresa" required>
+                </mat-form-field>              
+
+              </p>
+
+              <p>
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Direccion" required>
+                </mat-form-field>             
+
+              </p>
+
+              <p>
+
+                <mat-form-field>
+                  <input matInput type="text" placeholder="Barrio">
+                </mat-form-field>
+              </p>
+
             
-              <mat-form-field>
-                <input matInput type="text" placeholder="Direccion" required>
-              </mat-form-field>
+              <p>
+                <mat-form-field>
+                  <input matInput type="tel" placeholder="Celular">
+                  
+                </mat-form-field>
+
+              </p>
             
-              <mat-form-field>
-                <input matInput type="text" placeholder="Barrio">
-              </mat-form-field>
-            
-              <mat-form-field>
-                <input matInput type="tel" placeholder="Celular">
-              </mat-form-field>
-            
+              <p>
+                
+              </p>
               <mat-form-field>
                 <input matInput placeholder="Email" required>
               </mat-form-field>
@@ -58,11 +92,88 @@
               
         </mat-tab>
         <mat-tab label="Medica"> 
-          
+          <br>
+          <p>
+              <mat-form-field>
+                  <mat-select placeholder="Factor RH">
+                    <mat-option value="option">A+</mat-option>
+                    <mat-option value="option">A-</mat-option>
+                    <mat-option value="option">B+</mat-option>
+                    <mat-option value="option">B-</mat-option>
+                    <mat-option value="option">AB+</mat-option>
+                    <mat-option value="option">AB-</mat-option>
+                    <mat-option value="option">O+</mat-option>
+                    <mat-option value="option">O-</mat-option>
+                  </mat-select>
+                </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+                <input matInput placeholder="Peso aproximado" required>
+              </mat-form-field>
+          </p>
 
+          <p>
+              <mat-form-field>
+                  <input matInput placeholder="EPS" required>
+                </mat-form-field>
+            </p>
+
+          <p>
+            <mat-slide-toggle>Me encuentro en embarazo</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Tengo problemas cardiacos</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Tengo obesidad grado 2</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Me encuentro en embarazo</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Sufro de hipertiroidismo</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Extrasistole ventricular</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Fatiga exagerada</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>He tenido convulsiones los ultimos 5 anos</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Sufro de vertigo</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Tengo reemplazo de cadera</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Algun tratamiento psiquiatrico</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Sufro de diabetes</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-slide-toggle>Estoy en estado post operatorio</mat-slide-toggle>
+          </p>
         </mat-tab>
         
     </mat-tab-group>
 
   
 </div>
+

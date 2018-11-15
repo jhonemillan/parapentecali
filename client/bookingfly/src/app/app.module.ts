@@ -22,7 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatTabsModule,
     MatSelectModule,
     MatDatepickerModule,
+    MatSlideToggleModule,
     FormsModule,
     HttpClientModule
   ],
