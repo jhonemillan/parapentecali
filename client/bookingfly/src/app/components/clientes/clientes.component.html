@@ -1,11 +1,14 @@
 <div class="example-container">
+  <form #clientform = "ngForm">
+
+  
     <mat-tab-group>
         <mat-tab label="General"> 
           <br>
 
         <p>
           <mat-form-field> 
-              <input matInput placeholder="Nombres" required>
+              <input matInput placeholder="Nombres" required [(ngModel)]= "localClient.nombres" name="nombres">
            </mat-form-field>
           </p>
 
@@ -86,7 +89,7 @@
                 
               </p>
               <mat-form-field>
-                <input matInput placeholder="Email" required>
+                <input matInput placeholder="Email" required>                
               </mat-form-field>
             
               
@@ -132,7 +135,7 @@
           </p>
 
           <p>
-            <mat-slide-toggle>Me encuentro en embarazo</mat-slide-toggle>
+            <mat-slide-toggle>Sufro de taquicardia</mat-slide-toggle>
           </p>
 
           <p>
@@ -174,6 +177,7 @@
         
     </mat-tab-group>
 
-  
+    <button type="submit" class="btn btn-primary" (click)="Save()" [disabled]= "!clientform.valid">Guardar</button>
+  </form>
 </div>
 

@@ -1,3 +1,4 @@
+import { ClientService } from './services/client.service';
 import { JwtInterceptor } from './services/Interceptor';
 import { AuthenticationService } from './services/Authentication.service';
 import { AuthGuard } from './guards/auth.guard';
@@ -53,6 +54,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
   ],
   providers: [AuthGuard, 
               AuthenticationService,
+              ClientService,
               {
                 provide: HTTP_INTERCEPTORS,
                 useClass: JwtInterceptor,

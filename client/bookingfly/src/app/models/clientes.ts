@@ -1,3 +1,4 @@
+import { InfoMedica } from './info-medica';
 export interface Clientes {
     id: string;
     nombres: string;
@@ -13,5 +14,5 @@ export interface Clientes {
     celular: string;
     peso_aproximado: string;
     email: string;
-    edad: string;
+    edad: string;    
 }
