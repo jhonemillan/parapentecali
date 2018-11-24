@@ -1,6 +1,5 @@
 <div class="example-container">
-  <form #clientform = "ngForm">
-
+  <form #clientform = "ngForm" autocomplete="off">
   
     <mat-tab-group>
         <mat-tab label="General"> 
@@ -14,12 +13,15 @@
 
             <p>
               <mat-form-field>
-                <input matInput placeholder="Apellidos" required>
+                <input matInput placeholder="Apellidos" required [(ngModel)]= "localClient.apellidos" name="apellidos">
               </mat-form-field>
             </p>
             <p>
                 <mat-form-field>
-                    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                    <input matInput [matDatepicker]="picker" placeholder="Fecha Nacimiento" 
+                          required [(ngModel)]= "localClient.fechanacimiento" 
+                          (dateInput)="CalculatedAge($event)" (dateChange)="CalculatedAge($event)" 
+                          name="fechanacimiento">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
@@ -28,7 +30,7 @@
              
             <p>
                 <mat-form-field>
-                    <mat-select placeholder="Tipo Documento">
+                    <mat-select placeholder="Tipo Documento" [(ngModel)]= "localClient.tipo_documento" name="tipo_documento">
                       <mat-option value="option">Cedula de Ciudadania</mat-option>
                       <mat-option value="option">Cedula de Extranjeria</mat-option>
                       <mat-option value="option">Tarjeta de Identidad</mat-option>
@@ -39,32 +41,32 @@
               
               <p>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Documento" required>
+                    <input matInput type="text" placeholder="Documento" required [(ngModel)]= "localClient.documento" name="documento">
                   </mat-form-field>
               </p>
 
               <p>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Origen Documento" required>
+                    <input matInput type="text" placeholder="Origen Documento" required [(ngModel)]= "localClient.origendocumento" name="origendocumento">
                   </mat-form-field>
               </p>
 
               <p>
                 <mat-form-field>
-                  <input matInput type="text" placeholder="Profesion" required>
+                  <input matInput type="text" placeholder="Profesion" required [(ngModel)]= "localClient.profesion" name="profesion">
                 </mat-form-field>
               </p>
             
               <p>
                 <mat-form-field>
-                  <input matInput type="text" placeholder="Empresa" required>
+                  <input matInput type="text" placeholder="Empresa" required [(ngModel)]= "localClient.empresa" name="empresa">
                 </mat-form-field>              
 
               </p>
 
               <p>
                 <mat-form-field>
-                  <input matInput type="text" placeholder="Direccion" required>
+                  <input matInput type="text" placeholder="Direccion" required [(ngModel)]= "localClient.direccion" name="direccion">
                 </mat-form-field>             
 
               </p>
@@ -72,25 +74,32 @@
               <p>
 
                 <mat-form-field>
-                  <input matInput type="text" placeholder="Barrio">
+                  <input matInput type="text" placeholder="Barrio" required [(ngModel)]= "localClient.barrio" name="barrio">
                 </mat-form-field>
               </p>
 
             
               <p>
                 <mat-form-field>
-                  <input matInput type="tel" placeholder="Celular">
+                  <input matInput type="tel" placeholder="Celular" required [(ngModel)]= "localClient.celular" name="celular">
                   
                 </mat-form-field>
 
               </p>
-            
+              
               <p>
-                
+                <mat-form-field>
+                  <input matInput type="number" placeholder="edad" required [(ngModel)]= "edad" name="edad" disabled>
+                  
+                </mat-form-field>
+  
               </p>
-              <mat-form-field>
-                <input matInput placeholder="Email" required>                
-              </mat-form-field>
+              <p>
+                <mat-form-field>
+                  <input matInput placeholder="Email" required [(ngModel)]= "localClient.email" name="email">                
+                </mat-form-field>
+
+              </p>
             
               
         </mat-tab>
@@ -98,7 +107,7 @@
           <br>
           <p>
               <mat-form-field>
-                  <mat-select placeholder="Factor RH">
+                  <mat-select placeholder="Factor RH" required [(ngModel)]= "localMedicInfo.factor_rh" name="factor_rh">
                     <mat-option value="option">A+</mat-option>
                     <mat-option value="option">A-</mat-option>
                     <mat-option value="option">B+</mat-option>
@@ -112,72 +121,87 @@
           </p>
           <p>
             <mat-form-field>
-                <input matInput placeholder="Peso aproximado" required>
+                <input matInput placeholder="Peso aproximado" required [(ngModel)]= "localMedicInfo.peso_aproximado" name="peso_aproximado">
               </mat-form-field>
           </p>
 
           <p>
               <mat-form-field>
-                  <input matInput placeholder="EPS" required>
+                  <input matInput placeholder="EPS" required [(ngModel)]= "localMedicInfo.eps" name="eps">
                 </mat-form-field>
             </p>
 
           <p>
-            <mat-slide-toggle>Me encuentro en embarazo</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.embarazo" name="embarazo">Me encuentro en embarazo</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Tengo problemas cardiacos</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.cardiaco" name="cardiaco">Tengo problemas cardiacos</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Tengo obesidad grado 2</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.taquicardia" name="taquicardia">Sufro de taquicardia</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Sufro de taquicardia</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.hipertiroidismo" name="hipertiroidismo">Sufro de hipertiroidismo</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Sufro de hipertiroidismo</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.extrasistole" name="extrasistole">Extrasistole ventricular</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Extrasistole ventricular</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.fatiga" name="fatiga">Fatiga exagerada</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Fatiga exagerada</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.convulsiones" name="convulsiones">He tenido convulsiones los ultimos 5 anos</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>He tenido convulsiones los ultimos 5 anos</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.vertigo" name="vertigo">Sufro de vertigo</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Sufro de vertigo</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.cadera" name="cadera">Tengo reemplazo de cadera</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Tengo reemplazo de cadera</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.psiquiatria" name="psiquiatria">Algun tratamiento psiquiatrico</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Algun tratamiento psiquiatrico</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.diabetes" name="diabetes">Sufro de diabetes</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Sufro de diabetes</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.cirugia" name="cirugia">Estoy en estado post operatorio</mat-slide-toggle>
           </p>
 
           <p>
-            <mat-slide-toggle>Estoy en estado post operatorio</mat-slide-toggle>
+            <mat-slide-toggle [(ngModel)]= "localMedicInfo.fractura" name="fractura">He tenido fracturas en tobillos, rodillas</mat-slide-toggle>
+          </p>
+
+          <p>
+            <mat-form-field>
+                <input matInput placeholder="Contanto emergencia" required [(ngModel)]= "localMedicInfo.nombre_emergencia1" name="nombre_emergencia1">
+              </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field>
+                <input matInput placeholder="Telefono emergencia" required [(ngModel)]= "localMedicInfo.celular_emer1" name="celular_emer1">
+              </mat-form-field>
           </p>
         </mat-tab>
         
     </mat-tab-group>
+    <p>
 
-    <button type="submit" class="btn btn-primary" (click)="Save()" [disabled]= "!clientform.valid">Guardar</button>
+      <button type="submit" class="btn btn-primary" (click)="Save()" [disabled]= "!clientform.valid">Guardar</button>
+    </p>
+
   </form>
+  
 </div>
 

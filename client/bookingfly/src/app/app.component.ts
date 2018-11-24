@@ -2,6 +2,7 @@ import { Observable } from 'rxjs';
 import { AuthenticationService } from './services/Authentication.service';
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

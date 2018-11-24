@@ -13,12 +13,9 @@ export interface InfoMedica {
       diabetes: boolean,
       cirugia: boolean,
       factor_rh: string,
-      eps: string,
-      medico: string,
-      fractura: boolean,
-      arl: string,
+      eps: string,      
+      fractura: boolean,      
       nombre_emergencia1: string,
-      celular_emer1: string,
-      nombre_emergencia2: string,
-      celular_emer2: string
+      celular_emer1: string
+      
 }

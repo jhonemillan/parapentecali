@@ -11,8 +11,7 @@ export interface Clientes {
     empresa: string;
     direccion: string;
     barrio: string;
-    celular: string;
-    peso_aproximado: string;
+    celular: string;    
     email: string;
     edad: string;    
 }

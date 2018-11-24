@@ -66,19 +66,11 @@
     "eps": {
       "type": "string",
       "required": true
-    },
-    "medico": {
-      "type": "string",
-      "required": true
-    },
+    },    
     "fractura": {
       "type": "boolean",
       "required": true
-    },
-    "arl": {
-      "type": "string",
-      "required": true
-    },
+    },   
     "nombre_emergencia1": {
       "type": "string",
       "required": true
@@ -86,14 +78,7 @@
     "celular_emer1": {
       "type": "string",
       "required": true
-    },
-    "nombre_emergencia2": {
-      "type": "string",
-      "required": true
-    },
-    "celular_emer2": {
-      "type": "string"
-    }
+    }    
   },
   "validations": [],
   "relations": {},
