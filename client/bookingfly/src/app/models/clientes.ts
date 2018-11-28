@@ -6,7 +6,7 @@ export interface Clientes {
     fechanacimiento: string;
     tipo_documento: string;
     documento: string;
-    origendocumento: string;
+    origen_documento: string;
     profesion: string;
     empresa: string;
     direccion: string;

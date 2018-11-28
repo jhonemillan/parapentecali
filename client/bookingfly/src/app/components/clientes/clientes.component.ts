@@ -13,7 +13,22 @@ import * as moment from 'moment';
 export class ClientesComponent implements OnInit {
 
   localClient: Clientes = {} as any;
-  localMedicInfo: InfoMedica  = {} as any;
+  localMedicInfo: InfoMedica  = {
+    embarazo: false,
+      cardiaco: false,
+      taquicardia: false,
+      hipertiroidismo: false,
+      extrasistole: false,
+      fatiga: false,
+      convulsiones: false,
+      vertigo: false,
+      cadera: false,
+      psiquiatria: false,
+      diabetes: false,
+      cirugia: false,      
+      fractura: false,      
+  } as any;
+  
   edad;
 
   constructor(private client: ClientService) { }
@@ -22,8 +37,7 @@ export class ClientesComponent implements OnInit {
   }
 
   CalculatedAge(event: MatDatepickerInputEvent<Date>){
-    this.edad = moment().diff(Date.parse(this.localClient.fechanacimiento),'years');
-    console.log(this.edad);
+    this.edad = moment().diff(Date.parse(this.localClient.fechanacimiento),'years');   
   }
 
 
@@ -31,9 +45,9 @@ export class ClientesComponent implements OnInit {
   Save(){
     console.log(this.localClient);
     console.log(this.localMedicInfo);
-    // this.client.SaveClient(this.localClient, this.localMedicInfo).subscribe(data=>{
-    //   console.log(data);
-    // })
+    this.client.SaveClient(this.localClient, this.localMedicInfo).subscribe(data=>{
+      console.log(data);
+    });
   }
 
 

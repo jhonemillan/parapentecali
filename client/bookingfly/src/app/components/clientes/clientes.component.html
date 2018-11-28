@@ -31,10 +31,10 @@
             <p>
                 <mat-form-field>
                     <mat-select placeholder="Tipo Documento" [(ngModel)]= "localClient.tipo_documento" name="tipo_documento">
-                      <mat-option value="option">Cedula de Ciudadania</mat-option>
-                      <mat-option value="option">Cedula de Extranjeria</mat-option>
-                      <mat-option value="option">Tarjeta de Identidad</mat-option>
-                      <mat-option value="option">Pasaporte</mat-option>
+                      <mat-option value="CC">Cedula de Ciudadania</mat-option>
+                      <mat-option value="CE">Cedula de Extranjeria</mat-option>
+                      <mat-option value="TI">Tarjeta de Identidad</mat-option>
+                      <mat-option value="P">Pasaporte</mat-option>
                     </mat-select>
                   </mat-form-field>
             </p>
@@ -47,7 +47,7 @@
 
               <p>
                 <mat-form-field>
-                    <input matInput type="text" placeholder="Origen Documento" required [(ngModel)]= "localClient.origendocumento" name="origendocumento">
+                    <input matInput type="text" placeholder="Origen Documento" required [(ngModel)]= "localClient.origen_documento" name="origendocumento">
                   </mat-form-field>
               </p>
 
@@ -108,14 +108,14 @@
           <p>
               <mat-form-field>
                   <mat-select placeholder="Factor RH" required [(ngModel)]= "localMedicInfo.factor_rh" name="factor_rh">
-                    <mat-option value="option">A+</mat-option>
-                    <mat-option value="option">A-</mat-option>
-                    <mat-option value="option">B+</mat-option>
-                    <mat-option value="option">B-</mat-option>
-                    <mat-option value="option">AB+</mat-option>
-                    <mat-option value="option">AB-</mat-option>
-                    <mat-option value="option">O+</mat-option>
-                    <mat-option value="option">O-</mat-option>
+                    <mat-option value="A+">A+</mat-option>
+                    <mat-option value="A-">A-</mat-option>
+                    <mat-option value="B+">B+</mat-option>
+                    <mat-option value="B-">B-</mat-option>
+                    <mat-option value="AB+">AB+</mat-option>
+                    <mat-option value="AB-">AB-</mat-option>
+                    <mat-option value="O+">O+</mat-option>
+                    <mat-option value="O-">O-</mat-option>
                   </mat-select>
                 </mat-form-field>
           </p>
