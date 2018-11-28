@@ -21,7 +21,7 @@
                     <input matInput [matDatepicker]="picker" placeholder="Fecha Nacimiento" 
                           required [(ngModel)]= "localClient.fechanacimiento" 
                           (dateInput)="CalculatedAge($event)" (dateChange)="CalculatedAge($event)" 
-                          name="fechanacimiento">
+                          name="fechanacimiento" readonly>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                   </mat-form-field>
@@ -96,7 +96,7 @@
               </p>
               <p>
                 <mat-form-field>
-                  <input matInput placeholder="Email" required [(ngModel)]= "localClient.email" name="email">                
+                  <input matInput placeholder="Email" required [(ngModel)]= "localClient.email" name="email" email=true>                
                 </mat-form-field>
 
               </p>
@@ -121,7 +121,7 @@
           </p>
           <p>
             <mat-form-field>
-                <input matInput placeholder="Peso aproximado" required [(ngModel)]= "localMedicInfo.peso_aproximado" name="peso_aproximado">
+                <input type="number" matInput placeholder="Peso aproximado" required [(ngModel)]= "localMedicInfo.peso_aproximado" name="peso_aproximado">
               </mat-form-field>
           </p>
 
