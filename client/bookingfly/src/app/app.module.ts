@@ -24,6 +24,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import * as moment from 'moment';
 
 @NgModule({
@@ -50,6 +51,7 @@ import * as moment from 'moment';
     MatSelectModule,
     MatDatepickerModule,
     MatSlideToggleModule,
+    MatSnackBarModule,
     FormsModule,
     HttpClientModule
   ],

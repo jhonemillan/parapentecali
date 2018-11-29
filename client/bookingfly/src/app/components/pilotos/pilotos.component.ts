@@ -1,3 +1,4 @@
+import { Piloto } from './../../models/piloto';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PilotosComponent implements OnInit {
 
+  piloto = {} as Piloto;
+  pilotos : Piloto[];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  AgregarPiloto(){
+    
   }
 
 }
