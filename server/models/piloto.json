@@ -22,10 +22,7 @@
     "telefono": {
       "type": "string",
       "required": true
-    },
-    "email": {
-      "type": "string"
-    }
+    }    
   },
   "validations": [],
   "relations": {

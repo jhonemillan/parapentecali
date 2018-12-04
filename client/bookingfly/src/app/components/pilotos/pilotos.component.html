@@ -2,29 +2,53 @@
   <h1>Pilotos</h1>
   <br>
   <div class="row">
-    <div class="col-md">
+    <div class="col-sm">
       <mat-form-field >
-        <input matInput placeholder="Cedula">
+        <input matInput placeholder="Cedula" [(ngModel)]="piloto.cedula" type="number">
       </mat-form-field>
     </div>
-    <div class="col-md">
+    <div class="col-sm">
       <mat-form-field>
-        <input matInput placeholder="Nombre">
+        <input matInput placeholder="Nombre" [(ngModel)]="piloto.nombres">
       </mat-form-field>
     </div>
-    <div class="col-md">
+    <div class="col-sm">
       <mat-form-field>
-        <input matInput placeholder="Apellidos">
+        <input matInput placeholder="Apellidos" [(ngModel)]="piloto.apellidos">
       </mat-form-field>
     </div>
-    <div class="col-md">
+    <div class="col-sm">
       <mat-form-field >
-        <input matInput placeholder="Telefono">
+        <input matInput placeholder="Telefono" [(ngModel)]="piloto.telefono" type="number">
       </mat-form-field>
     </div>
    
     <div class="col-sm">
-      <button type="button" class="btn btn-primary">Agregar</button>
+      <button type="button" class="btn btn-primary" (click)="AddPilot()">Agregar</button>
     </div>
+  </div>
+
+  <div class="table-responsive">
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Cedula</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellidos</th>
+          <th scope="col">Telefono</th>          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pilot of pilotos">
+          <td>{{pilot.cedula}}</td>
+          <td>{{pilot.nombres}}</td>
+          <td>{{pilot.apellidos}}</td>
+          <td>{{pilot.telefono}}</td> 
+          <td><button type="button" class="btn btn-danger" (click)="DeletePilot(pilot.id)">Borrar</button></td>        
+        </tr>
+        
+      </tbody>
+    </table>
   </div>
 </div>

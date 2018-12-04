@@ -1,3 +1,4 @@
+import { AdminService } from './services/admin.service';
 import { ClientService } from './services/client.service';
 import { JwtInterceptor } from './services/Interceptor';
 import { AuthenticationService } from './services/Authentication.service';
@@ -57,6 +58,7 @@ import * as moment from 'moment';
   ],
   providers: [AuthGuard, 
               AuthenticationService,
+              AdminService,
               ClientService,
               {
                 provide: HTTP_INTERCEPTORS,
