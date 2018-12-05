@@ -11,13 +11,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bookingfly';
   isLoggedIn$: Observable<boolean>; 
-
+  isNotLogged$: Observable<boolean>
   constructor(private auth: AuthenticationService){
     
   }
 
   ngOnInit(){
+    this.isNotLogged$ = this.auth.isLoggedOut;
     this.isLoggedIn$ = this.auth.isLoggedIn;
+    
   }
 
   logout(){

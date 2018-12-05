@@ -10,12 +10,16 @@ import { environment } from 'src/environments/environment';
 })
 export class AuthenticationService {
   private loggedIn = new BehaviorSubject<boolean>(false);
-
+  private notLogget = new BehaviorSubject<boolean>(true);
 constructor(private http: HttpClient, 
   private router: Router) { }
 
 get isLoggedIn() {
   return this.loggedIn.asObservable(); // {2}
+}
+
+get isLoggedOut(){
+  return this.notLogget.asObservable();
 }
 
 login(username: string, password: string): Observable<any> {
@@ -25,6 +29,7 @@ login(username: string, password: string): Observable<any> {
         if (user && user.id) {          
           localStorage.setItem('currentUser', JSON.stringify(user));
           this.loggedIn.next(true);
+          this.notLogget.next(false);
         }
 
         return user;
@@ -37,6 +42,7 @@ logout(): Observable<any> {
     .pipe(
       map(user => {        
         this.loggedIn.next(false);
+        this.notLogget.next(true);
         localStorage.removeItem('currentUser');
         this.router.navigate(['/login']);        
       })

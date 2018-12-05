@@ -1,3 +1,4 @@
+import { PublicGuard } from './guards/public.guard';
 import { AdminService } from './services/admin.service';
 import { ClientService } from './services/client.service';
 import { JwtInterceptor } from './services/Interceptor';
@@ -57,6 +58,7 @@ import * as moment from 'moment';
     HttpClientModule
   ],
   providers: [AuthGuard, 
+              PublicGuard,
               AuthenticationService,
               AdminService,
               ClientService,
