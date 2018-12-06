@@ -28,6 +28,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import * as moment from 'moment';
+import { AgendaComponent } from './components/agenda/agenda.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import * as moment from 'moment';
     ClientesComponent,
     LoginComponent,
     VuelosComponent,
-    PilotosComponent
+    PilotosComponent,
+    AgendaComponent
     
   ],
   imports: [

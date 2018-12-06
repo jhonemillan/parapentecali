@@ -1,3 +1,4 @@
+import { AgendaComponent } from './components/agenda/agenda.component';
 import { PublicGuard } from './guards/public.guard';
 import { AuthGuard } from './guards/auth.guard';
 import { PilotosComponent } from './components/pilotos/pilotos.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'clientes', component: ClientesComponent},
   {path: 'vuelos', component: VuelosComponent, canActivate: [AuthGuard]},
+  {path: 'agenda', component: AgendaComponent, canActivate: [AuthGuard]},
   {path: 'pilotos', component: PilotosComponent, canActivate: [AuthGuard]},
   {path: '**', redirectTo: ''}
 ];

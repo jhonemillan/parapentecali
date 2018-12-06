@@ -54,6 +54,18 @@
     "email": {
       "type": "string",
       "required": true
+    },
+    "fecha_vuelo":{
+      "type":"date",
+      "required":false
+    },
+    "factura":{
+      "type":"string",
+      "required":false
+    },
+    "piloto":{
+      "type":"string",
+      "required":false
     }
   },
   "validations": [],

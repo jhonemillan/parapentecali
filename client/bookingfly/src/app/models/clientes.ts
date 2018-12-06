@@ -13,5 +13,9 @@ export interface Clientes {
     barrio: string;
     celular: string;    
     email: string;
-    edad: string;    
+    edad: string;
+    fecha_vuelo?: Date;
+    factura: string;
+    piloto: string
 }
+
