@@ -1,3 +1,4 @@
+import { Clientes } from 'src/app/models/clientes';
 import { Piloto } from './../models/piloto';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -25,6 +26,10 @@ constructor(private http: HttpClient,
 
   GetPilots(): Observable<Piloto[]> {
     return this.http.get<Piloto[]>(environment.url+'/pilotos')
+  }
+
+  GetClients(): Observable<Clientes[]>{
+    return this.http.get<Clientes[]>(environment.url+'/clientes')
   }
 
 }

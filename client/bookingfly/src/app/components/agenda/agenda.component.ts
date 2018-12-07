@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListUsersComponent } from '../list-users/list-users.component';
 
 @Component({
   selector: 'app-agenda',

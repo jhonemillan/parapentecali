@@ -1,0 +1,38 @@
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">Buscar por Documento</span>
+  </div>
+  <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+    </div>
+</div>
+
+<br>
+<table class="table">
+<thead class="thead-dark">
+<tr>
+  <th scope="col">Documento</th>
+  <th scope="col">Nombre</th>
+  <th scope="col">Apellido</th>
+  <th scope="col">Telefono</th>
+  <th scope="col">Fecha Vuelo</th>
+  <th scope="col">Factura</th>
+  <th scope="col">Piloto</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let c of clientes">
+  <th scope="row">{{c.documento}}</th>
+  <td>{{c.nombres}}</td>
+  <td>{{c.apellidos}}</td>
+  <td>{{c.celular}}</td>
+  <td>Date Time picker</td>
+  <td>Boton</td>
+  <td>Piloto</td>
+</tr>
+
+
+</tbody>
+</table>
+
